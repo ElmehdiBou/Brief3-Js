@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JS Workshop</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#Variables">Variables</a></li>
+          <li><a href="#Conditions">Conditions</a></li>
+          <li><a href="#Deviner">Boucles</a></li>
+          <li>
+            <a href="#chaine1">ChaineExc1</a>
+          </li>
+          <li>
+            <a href="#chaine2">ChaineExc2</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h1 id="Variables">Permutation de deux nombres</h1>
+        <section>
+          <h6>Enoncé</h6>
+          <div>
+            <p>
+              Ecrire un script qui permute deux nombres saisis dans deux inputs
+            </p>
+          </div>
+        </section>
+        <section>
+          <h6>Démo</h6>
+          <div class="swap second">
+            <div class="numone">
+              <label for="num1">Nombre 1:</label>
+              <input type="number" id="num1" />
+            </div>
+            <button id="btn">
+              <span>&#8594;</span>
+              <span>&#8592;</span>
+            </button>
+            <div class="numtwo">
+              <label for="num2">Nombre 2:</label>
+              <input type="number" id="num2" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h6>Code source</h6>
+          <p class="code">
+            <!-- <code>
+              var btn = document.getElementById("btn"); <br />
+              var one = document.getElementById("num1"); <br />
+              var two = document.getElementById("num2"); <br />
+              btn.onclick = function () <br />
+              { let a = num1.value; <br />let b = num2.value;<br />
+              let c = a;<br />
+              a = b;<br />
+              b = c; <br />
+              num1.value = a; <br />
+              num2.value = b; };
+            </code> -->
+            <img src="./images/jsscript.PNG" alt="" />
+          </p>
+          <!-- <script>
+            var btn = document.getElementById("btn");
+            var one = document.getElementById("num1");
+            var two = document.getElementById("num2");
+            btn.onclick = function () {
+              let a = num1.value;
+              let b = num2.value;
+              let c = a;
+              a = b;
+              b = c;
+              num1.value = a;
+              num2.value = b;
+            };
+          </script> -->
+        </section>
+
+        <!-- start conditions  -->
+        <h1 id="Conditions">Valider une date</h1>
+        <section>
+          <h6>Enoncé</h6>
+          <div>
+            <p>
+              Ecrire un script qui permet de saisir les trois champs d’une date
+              (jour, mois et année) et d’indiquer si la date est correcte ou non
+            </p>
+          </div>
+        </section>
+        <section>
+          <h6>Démo</h6>
+          <div class="second">
+            <div class="time">
+              <label for="jour">Jour : &nbsp;</label>
+              <input type="number" id="jour" />
+            </div>
+            <div class="time">
+              <label for="mois">Mois : &nbsp;</label>
+              <input type="number" id="mois" />
+            </div>
+            <div class="time">
+              <label for="année">Année :</label>
+              <input type="number" id="année" />
+            </div>
+            <button id="valider">Valider</button>
+            <p id="text"></p>
+          </div>
+        </section>
+        <section>
+          <h6>Code source</h6>
+          <p class="code">
+            <img src="./images/date.PNG" alt="" />
+          </p>
+        </section>
+        <!-- start devine le nombre !  -->
+        <h1 id="chaine2">Devine le nombre !</h1>
+        <section>
+          <h6>Enoncé</h6>
+          <div>
+            <p>
+              L’utilisateur doit deviner un nombre entre 1 et 50 que le
+              programme a choisi aléatoirement en 10 tentatives. Quand
+              l’utilisateur entre une valeur, on lui affiche le nombre de
+              tentatives restantes, ainsi qu’un message indiquant si sa réponse
+              est correcte ou pas.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h6>Démo</h6>
+          <div class="second">
+            <div class="guess">
+              <span id="tentative"></span>
+              <div class="guessBtn">
+                <input type="number" min="1" max="50" id="numGuess" />
+                <button onclick="guessNum()" id="envoyer">Envoyer</button>
+              </div>
+              <p id="guessRslt">Réesseyez encore !</p>
+              <!-- <div class="resultParas">
+                <p class="guesses"></p>
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+              </div> -->
+              <!-- <p>Réesseyez encore !</p> -->
+            </div>
+          </div>
+        </section>
+        <section>
+          <h6>Code source</h6>
+          <p class="code">
+            <img src="./images/date.PNG" alt="" />
+          </p>
+        </section>
+        <h1 id="Deviner">Table de multiplication</h1>
+        <section>
+          <h6>Enoncé</h6>
+          <div>
+            <p>
+              Afficher la table de multiplication d’un nombre saisi par
+              l’utilisateur dans un input.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h6>Démo</h6>
+          <div class="second">
+            <div class="guessBtn">
+              <input type="number" id="numtable" />
+              <button onclick="generate()" id="affichertable">
+                Générer la table
+              </button>
+              <p id="tableresult"></p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h6>Code source</h6>
+          <p class="code">
+            <img src="./images/table.PNG" alt="" />
+          </p>
+        </section>
+        <h1 id="Deviner">Compter le nombre de voyelles dans une chaine</h1>
+        <section>
+          <h6>Enoncé</h6>
+          <div>
+            <p>
+              Ecrire un programme Javascript qui permet de calculer le nombre de
+              voyelles (a,e,i,o,u,y) dans une phrase saisie par l’utilisateur
+            </p>
+          </div>
+        </section>
+        <section>
+          <h6>Démo</h6>
+          <div class="second">
+            <div class="guessBtn">
+              <p class="phvoyl">Saisir une phrase</p>
+              <input type="text" id="txtvoyel" />
+              <button onclick="countingvoyel()" id="comptervyl">
+                Compter le nombre de voyelles
+              </button>
+              <p id="voyelresult"></p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h6>Code source</h6>
+          <p class="code">
+            <img src="./images/voyelle.png" alt="" />
+          </p>
+        </section>
+        <h1 id="chaine1">Recherche et suppression dans une chaine</h1>
+        <section>
+          <h6>Enoncé</h6>
+          <div>
+            <p>
+              Ecrire un programme Javascript qui demande à l’utilisateur de
+              saisir une phrase dans une zone de texte et un mot dans une autre
+              zone de texte. Le clique sur le bouton rechercher affiche un
+              message si le mot existe dans la phrase ou non. Le clique sur le
+              bouton supprimer permet d’effacer toutes les occurrence du mot
+              dans la phrase ( si le mot existe bien sûr).
+            </p>
+          </div>
+        </section>
+        <section>
+          <h6>Démo</h6>
+          <div class="second">
+            <div class="guessBtn">
+              <p class="">Saisir une phrase</p>
+              <input type="text" id="phrasesaisi" />
+              <button onclick="recherchermot()">Rechercher</button>
+              <div class="part2">
+                <p class="phvoyl">Saisir le mot à rechercher ou à supprimer</p>
+                <input type="text" id="motsaisi" />
+                <button onclick="suprimermot()">
+                  Supprimer les occurences
+                </button>
+              </div>
+              <p id="outputphrase"></p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h6>Code source</h6>
+          <p class="code">
+            <img src="./images/rechercheanddelete.PNG" alt="" />
+          </p>
+        </section>
+        <p>hada</p>
+      </main>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
